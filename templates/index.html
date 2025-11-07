@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>🎤 Fashion Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #chatbox { border:1px solid #ddd; padding:10px; width:90%; max-width:800px; height:260px; overflow-y:auto; margin-bottom:12px; background:#fafafa; }
+    #htmlOut { border:1px solid #eee; padding:12px; width:90%; max-width:800px; margin-top:14px; background:#fff; }
+    #controls { margin-top:8px; }
+    #textInput { width:70%; padding:8px; }
+    #sendBtn { padding:8px 12px; margin-left:8px; }
+    #micBtn { padding:10px 14px; margin-left:10px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer; }
+    #micBtn.recording { background:#c62828; }
+    .user { color:#222; margin-bottom:6px; }
+    .bot { color:#00695c; margin-bottom:6px; }
+  </style>
+</head>
+<body>
+  <h2>🎤 Fashion Chatbot</h2>
+
+  <div id="chatbox"></div>
+
+  <div id="controls">
+    <input id="textInput" type="text" placeholder="Type your message..." />
+    <button id="sendBtn">Send</button>
+    <button id="micBtn">🎙 Hold to Speak</button>
+  </div>
+
+  <div id="htmlOut"></div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
